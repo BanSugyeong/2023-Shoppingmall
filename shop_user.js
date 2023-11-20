@@ -1,9 +1,9 @@
 // 상품 데이터
 const products = [
-    { id: 1, name: '트위트 숏 자켓', description: 'OUTER',image: '옷사진/트위드 숏자켓_블랙.jpg', price: 48900 },
-    { id: 2, name: '실크 블라우스', description: 'TOP', price: 37800 },
-    { id: 3, name: '테니스 스커트', description: 'BOTTOM', price: 16300 },
-    { id: 4, name: '와이드 슬랙스', description: 'BOTTOM', price: 21800 }
+    { id: 1, name: '트위트 숏 자켓', description: 'OUTER', image: '옷사진/a1.jpg', price: 48900 },
+    { id: 2, name: '실크 블라우스', description: 'TOP', image: '옷사진/b1.jpg', price: 37800 },
+    { id: 3, name: '테니스 스커트', description: 'BOTTOM', image: '옷사진/c1.jpg', price: 16300 },
+    { id: 4, name: '와이드 슬랙스', description: 'BOTTOM', image: '옷사진/d1.png', price: 21800 }
 ];
 
 // 상품 목록 함수
@@ -29,8 +29,8 @@ function displayProducts() {
         productPrice.textContent = `${product.price}원`;
 
         productContainer.appendChild(productName);
-        productContainer.appendChild(productDescription);
         productContainer.appendChild(productImage);
+        productContainer.appendChild(productDescription);
         productContainer.appendChild(productPrice);
 
         productList.appendChild(productContainer);
