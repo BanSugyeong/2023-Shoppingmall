@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+h1 {
+    font-family: 'Vitro_core';
+    font-size: 40px;
+    letter-spacing: 15px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FF9999;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+section {
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer {
+    background-color: #FFCCCC;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em;
+    width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 슬라이더 */
+.slider_panel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slider_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slider_item img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-border {
+    border-radius: 2px;
+    margin: 10px;
+}
+
+body.overlay {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* 사용자 페이지에서 관리자 페이지로 이동하는 버튼 */
+button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FFCCCC;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}

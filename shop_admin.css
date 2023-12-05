@@ -45,23 +45,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-.product {
-    border: 1px solid #ddd;
-    padding: 1em;
-    margin: 1em;
-    width: 200px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* 사용자 페이지에서 관리자 페이지로 이동하는 버튼 */
-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #FFCCCC;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    cursor: pointer;
-}
