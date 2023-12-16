@@ -1,21 +1,14 @@
-// 상품 데이터
-const products = [
-    { id: 1, name: '트위트 숏 자켓', description: 'OUTER', image: '옷사진/a1.jpg', price: 48900 },
-    { id: 2, name: '실크 블라우스', description: 'TOP', image: '옷사진/b1.jpg', price: 37800 },
-    { id: 3, name: '테니스 스커트', description: 'BOTTOM', image: '옷사진/c1.jpg', price: 16300 },
-    { id: 4, name: '와이드 슬랙스', description: 'BOTTOM', image: '옷사진/d1.png', price: 21800 }
-];
-
 // 상품 목록 함수
-function displayProducts() {
+function displayProducts(products) {
     const productList = document.getElementById('productList');
+    productList.innerHTML = '';
 
     products.forEach(product => {
         const productContainer = document.createElement('div');
         productContainer.classList.add('product');
 
         const productImage = document.createElement('img');
-        productImage.src = product.image;
+        productImage.src = `옷사진/${product.image}`;
         productImage.alt = product.name;
         productImage.style.width = '100px';
 
@@ -37,7 +30,20 @@ function displayProducts() {
     });
 }
 
-window.onload = displayProducts;
+// 서버에서 상품 정보를 가져오는 함수
+function getProductsFromServer() {
+    fetch('http://localhost:3000/products')
+        .then(response => response.json())
+        .then(products => {
+            displayProducts(products);
+        })
+        .catch(error => console.error('상품 정보를 가져오는 중 에러 발생:', error));
+}
+
+window.onload = function () {
+    // 페이지 로드 시 서버에서 상품 정보를 가져와서 표시
+    getProductsFromServer();
+};
 
 function goToAdminPage() {
     window.location.href = 'shop_admin.html';
