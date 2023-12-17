@@ -7,11 +7,6 @@ function displayProducts(products) {
         const productContainer = document.createElement('div');
         productContainer.classList.add('product');
 
-        const productImage = document.createElement('img');
-        productImage.src = `옷사진/${product.image}`;
-        productImage.alt = product.name;
-        productImage.style.width = '100px';
-
         const productName = document.createElement('h3');
         productName.textContent = product.name;
 
@@ -22,7 +17,6 @@ function displayProducts(products) {
         productPrice.textContent = `${product.price}원`;
 
         productContainer.appendChild(productName);
-        productContainer.appendChild(productImage);
         productContainer.appendChild(productDescription);
         productContainer.appendChild(productPrice);
 
@@ -45,7 +39,11 @@ window.onload = function () {
     getProductsFromServer();
 };
 
+
 function goToAdminPage() {
     window.location.href = 'shop_admin.html';
     alert('관리자 페이지로 이동합니다.');
 }
+
+// 페이지 로드 시 서버에서 상품 정보를 가져와서 표시
+getProductsFromServer();

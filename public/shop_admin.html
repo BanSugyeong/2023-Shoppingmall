@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangee Admin</title>
+    <link rel="stylesheet" href="shop_admin.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="shop_user.html" style="text-decoration: none; color: inherit;">
+            <h1>Gangee Shop(admin)</h1>
+        </a>
+        
+    </header>
+
+    <div class="'product-border">
+        <section id="productList"></section>
+    </div>
+
+    <!-- 상품 추가 모달 창 -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddProductModal()">&times;</span>
+            <!-- 모달 내용 -->
+            <h2>상품 추가</h2>
+            <div>
+                <form id="insert_form">
+                <fieldset>
+                    <legend>데이터 추가</legend>
+                    <table>
+                        <tr>
+                            <td><label>상품명</label></td>
+                            <td><input type="text" name="name" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>상품 정보</label></td>
+                            <td><input type="text" name="description" /></td>
+                        </tr>
+                        <tr>
+                            <td><label>가격</label></td>
+                            <td><input type="text" name="price" /></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="추가" />
+                </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        사진 출처 : [클래식블랑] / https://classic-blanc.com/index.html
+    </footer>
+
+    <button onclick="openAddProductModal()">상품 추가</button>
+
+    <script src="shop_admin.js"></script>
+</body>
+</html>

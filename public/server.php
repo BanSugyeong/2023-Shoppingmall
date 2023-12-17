@@ -2,9 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var cors = require('cors');
-// var multer = require('multer');
 const fs = require('fs');
-
 
 var app = express();
 
@@ -16,9 +14,6 @@ var client = mysql.createConnection({
     password: '221161101',
     database: 'Company221161101'
 });
-
-// var storage = multer.memoryStorage(); // 이미지를 메모리에 저장
-// var upload = multer({ storage: storage });
 
 app.use(express.static('shoppingmall'));
 app.use('/image', express.static(__dirname + '/옷사진'));
