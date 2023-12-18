@@ -1,3 +1,5 @@
+<!-- shop_admin.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +14,13 @@
         <a href="shop_user.html" style="text-decoration: none; color: inherit;">
             <h1>Gangee Shop(admin)</h1>
         </a>
-        
     </header>
+
+    <div class="button-container">
+        <button onclick="openAddProductModal()">상품 추가</button>
+        <button onclick="openEditProductModal()">상품 수정</button>
+        <button onclick="deleteProduct()">상품 삭제</button>
+    </div>
 
     <div class="'product-border">
         <section id="productList"></section>
@@ -50,11 +57,40 @@
         </div>
     </div>
 
+    <!-- 상품 수정 모달 창 -->
+    <div id="editProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditProductModal()">&times;</span>
+            <!-- 모달 내용 -->
+            <h2>상품 수정</h2>
+            <div>
+                <form id="edit_form">
+                    <fieldset>
+                        <legend>데이터 수정</legend>
+                        <table>
+                            <tr>
+                                <td><label>상품명</label></td>
+                                <td><input type="text" name="name" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>상품 정보</label></td>
+                                <td><input type="text" name="description" /></td>
+                            </tr>
+                            <tr>
+                                <td><label>가격</label></td>
+                                <td><input type="text" name="price" /></td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="수정" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         사진 출처 : [클래식블랑] / https://classic-blanc.com/index.html
     </footer>
-
-    <button onclick="openAddProductModal()">상품 추가</button>
 
     <script src="shop_admin.js"></script>
 </body>

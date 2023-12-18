@@ -1,3 +1,5 @@
+<!-- shop_user.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +13,11 @@
     <script src="jquery.colorbox.js"></script>
     <script>
         $(document).ready(function () {
-            // 이미지 슬라이더 초기화
-            $('.slider_item:first-child').show();
-            setInterval(function () {
-                $('.slider_item:first-child').fadeOut().next('.slider_item').fadeIn().end().appendTo('.slider_panel');
-            }, 3000); // 3초마다 변경
+            // // 이미지 슬라이더 초기화
+            // $('.slider_item:first-child').show();
+            // setInterval(function () {
+            //     $('.slider_item:first-child').fadeOut().next('.slider_item').fadeIn().end().appendTo('.slider_panel');
+            // }, 3000); // 3초마다 변경
 
             // 라이트박스 초기화 및 열기
             $('.colorbox').colorbox({
@@ -45,7 +47,7 @@
     
     <div class="product-border">
         <section id="productList">
-            <div class="animation_canvas">
+            <!-- <div class="animation_canvas">
                 <div class="slider_panel">
                     <div class="slider_item">
                         <img src="clothes/a1.jpg" class="slider_image" alt="a1" />
@@ -60,7 +62,7 @@
                         <img src="clothes/a4.jpg" class="slider_image" alt="a4" />
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
     </div>
 
@@ -76,6 +78,7 @@
     <button onclick="goToAdminPage()">관리자 페이지</button>
 
     <script src="shop_user.js"></script>
+
 </body>
 
 </html>
